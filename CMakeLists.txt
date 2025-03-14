@@ -57,6 +57,10 @@ include_directories(${PROJECT_SOURCE_DIR}/src)
 # Adds an executable target called "BusquedaNoInformada" to be built from the source files listed in the command invocation.
 add_executable(TSP
     src/main.cc
+    src/generar-instancia.cc
+    src/tsp-dinamico.cc
+    src/tsp-fuerza-bruta.cc
+    src/tsp-voraz.cc
     )
 
 # Add expected compiler features to a target.

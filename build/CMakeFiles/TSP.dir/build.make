@@ -83,17 +83,81 @@ CMakeFiles/TSP.dir/src/main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TSP.dir/src/main.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/practicasDAA/DAA-PR4-Programacion_Dinamica/src/main.cc -o CMakeFiles/TSP.dir/src/main.cc.s
 
+CMakeFiles/TSP.dir/src/generar-instancia.cc.o: CMakeFiles/TSP.dir/flags.make
+CMakeFiles/TSP.dir/src/generar-instancia.cc.o: /home/usuario/practicasDAA/DAA-PR4-Programacion_Dinamica/src/generar-instancia.cc
+CMakeFiles/TSP.dir/src/generar-instancia.cc.o: CMakeFiles/TSP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/practicasDAA/DAA-PR4-Programacion_Dinamica/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TSP.dir/src/generar-instancia.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TSP.dir/src/generar-instancia.cc.o -MF CMakeFiles/TSP.dir/src/generar-instancia.cc.o.d -o CMakeFiles/TSP.dir/src/generar-instancia.cc.o -c /home/usuario/practicasDAA/DAA-PR4-Programacion_Dinamica/src/generar-instancia.cc
+
+CMakeFiles/TSP.dir/src/generar-instancia.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TSP.dir/src/generar-instancia.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/practicasDAA/DAA-PR4-Programacion_Dinamica/src/generar-instancia.cc > CMakeFiles/TSP.dir/src/generar-instancia.cc.i
+
+CMakeFiles/TSP.dir/src/generar-instancia.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TSP.dir/src/generar-instancia.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/practicasDAA/DAA-PR4-Programacion_Dinamica/src/generar-instancia.cc -o CMakeFiles/TSP.dir/src/generar-instancia.cc.s
+
+CMakeFiles/TSP.dir/src/tsp-dinamico.cc.o: CMakeFiles/TSP.dir/flags.make
+CMakeFiles/TSP.dir/src/tsp-dinamico.cc.o: /home/usuario/practicasDAA/DAA-PR4-Programacion_Dinamica/src/tsp-dinamico.cc
+CMakeFiles/TSP.dir/src/tsp-dinamico.cc.o: CMakeFiles/TSP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/practicasDAA/DAA-PR4-Programacion_Dinamica/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/TSP.dir/src/tsp-dinamico.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TSP.dir/src/tsp-dinamico.cc.o -MF CMakeFiles/TSP.dir/src/tsp-dinamico.cc.o.d -o CMakeFiles/TSP.dir/src/tsp-dinamico.cc.o -c /home/usuario/practicasDAA/DAA-PR4-Programacion_Dinamica/src/tsp-dinamico.cc
+
+CMakeFiles/TSP.dir/src/tsp-dinamico.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TSP.dir/src/tsp-dinamico.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/practicasDAA/DAA-PR4-Programacion_Dinamica/src/tsp-dinamico.cc > CMakeFiles/TSP.dir/src/tsp-dinamico.cc.i
+
+CMakeFiles/TSP.dir/src/tsp-dinamico.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TSP.dir/src/tsp-dinamico.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/practicasDAA/DAA-PR4-Programacion_Dinamica/src/tsp-dinamico.cc -o CMakeFiles/TSP.dir/src/tsp-dinamico.cc.s
+
+CMakeFiles/TSP.dir/src/tsp-fuerza-bruta.cc.o: CMakeFiles/TSP.dir/flags.make
+CMakeFiles/TSP.dir/src/tsp-fuerza-bruta.cc.o: /home/usuario/practicasDAA/DAA-PR4-Programacion_Dinamica/src/tsp-fuerza-bruta.cc
+CMakeFiles/TSP.dir/src/tsp-fuerza-bruta.cc.o: CMakeFiles/TSP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/practicasDAA/DAA-PR4-Programacion_Dinamica/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/TSP.dir/src/tsp-fuerza-bruta.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TSP.dir/src/tsp-fuerza-bruta.cc.o -MF CMakeFiles/TSP.dir/src/tsp-fuerza-bruta.cc.o.d -o CMakeFiles/TSP.dir/src/tsp-fuerza-bruta.cc.o -c /home/usuario/practicasDAA/DAA-PR4-Programacion_Dinamica/src/tsp-fuerza-bruta.cc
+
+CMakeFiles/TSP.dir/src/tsp-fuerza-bruta.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TSP.dir/src/tsp-fuerza-bruta.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/practicasDAA/DAA-PR4-Programacion_Dinamica/src/tsp-fuerza-bruta.cc > CMakeFiles/TSP.dir/src/tsp-fuerza-bruta.cc.i
+
+CMakeFiles/TSP.dir/src/tsp-fuerza-bruta.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TSP.dir/src/tsp-fuerza-bruta.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/practicasDAA/DAA-PR4-Programacion_Dinamica/src/tsp-fuerza-bruta.cc -o CMakeFiles/TSP.dir/src/tsp-fuerza-bruta.cc.s
+
+CMakeFiles/TSP.dir/src/tsp-voraz.cc.o: CMakeFiles/TSP.dir/flags.make
+CMakeFiles/TSP.dir/src/tsp-voraz.cc.o: /home/usuario/practicasDAA/DAA-PR4-Programacion_Dinamica/src/tsp-voraz.cc
+CMakeFiles/TSP.dir/src/tsp-voraz.cc.o: CMakeFiles/TSP.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuario/practicasDAA/DAA-PR4-Programacion_Dinamica/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/TSP.dir/src/tsp-voraz.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TSP.dir/src/tsp-voraz.cc.o -MF CMakeFiles/TSP.dir/src/tsp-voraz.cc.o.d -o CMakeFiles/TSP.dir/src/tsp-voraz.cc.o -c /home/usuario/practicasDAA/DAA-PR4-Programacion_Dinamica/src/tsp-voraz.cc
+
+CMakeFiles/TSP.dir/src/tsp-voraz.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TSP.dir/src/tsp-voraz.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/practicasDAA/DAA-PR4-Programacion_Dinamica/src/tsp-voraz.cc > CMakeFiles/TSP.dir/src/tsp-voraz.cc.i
+
+CMakeFiles/TSP.dir/src/tsp-voraz.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TSP.dir/src/tsp-voraz.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/practicasDAA/DAA-PR4-Programacion_Dinamica/src/tsp-voraz.cc -o CMakeFiles/TSP.dir/src/tsp-voraz.cc.s
+
 # Object files for target TSP
 TSP_OBJECTS = \
-"CMakeFiles/TSP.dir/src/main.cc.o"
+"CMakeFiles/TSP.dir/src/main.cc.o" \
+"CMakeFiles/TSP.dir/src/generar-instancia.cc.o" \
+"CMakeFiles/TSP.dir/src/tsp-dinamico.cc.o" \
+"CMakeFiles/TSP.dir/src/tsp-fuerza-bruta.cc.o" \
+"CMakeFiles/TSP.dir/src/tsp-voraz.cc.o"
 
 # External object files for target TSP
 TSP_EXTERNAL_OBJECTS =
 
 TSP: CMakeFiles/TSP.dir/src/main.cc.o
+TSP: CMakeFiles/TSP.dir/src/generar-instancia.cc.o
+TSP: CMakeFiles/TSP.dir/src/tsp-dinamico.cc.o
+TSP: CMakeFiles/TSP.dir/src/tsp-fuerza-bruta.cc.o
+TSP: CMakeFiles/TSP.dir/src/tsp-voraz.cc.o
 TSP: CMakeFiles/TSP.dir/build.make
 TSP: CMakeFiles/TSP.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/usuario/practicasDAA/DAA-PR4-Programacion_Dinamica/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable TSP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/usuario/practicasDAA/DAA-PR4-Programacion_Dinamica/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable TSP"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TSP.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

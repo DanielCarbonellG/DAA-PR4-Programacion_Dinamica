@@ -1,1 +1,1 @@
-/usr/bin/c++ -rdynamic CMakeFiles/TSP.dir/src/main.cc.o -o TSP 
+/usr/bin/c++ -rdynamic CMakeFiles/TSP.dir/src/main.cc.o "CMakeFiles/TSP.dir/src/generar-instancia.cc.o" "CMakeFiles/TSP.dir/src/tsp-dinamico.cc.o" "CMakeFiles/TSP.dir/src/tsp-fuerza-bruta.cc.o" "CMakeFiles/TSP.dir/src/tsp-voraz.cc.o" -o TSP 

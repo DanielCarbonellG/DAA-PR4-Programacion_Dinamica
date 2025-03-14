@@ -129,6 +129,30 @@ TSP/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSP.dir/build.make CMakeFiles/TSP.dir/build
 .PHONY : TSP/fast
 
+src/generar-instancia.o: src/generar-instancia.cc.o
+.PHONY : src/generar-instancia.o
+
+# target to build an object file
+src/generar-instancia.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSP.dir/build.make CMakeFiles/TSP.dir/src/generar-instancia.cc.o
+.PHONY : src/generar-instancia.cc.o
+
+src/generar-instancia.i: src/generar-instancia.cc.i
+.PHONY : src/generar-instancia.i
+
+# target to preprocess a source file
+src/generar-instancia.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSP.dir/build.make CMakeFiles/TSP.dir/src/generar-instancia.cc.i
+.PHONY : src/generar-instancia.cc.i
+
+src/generar-instancia.s: src/generar-instancia.cc.s
+.PHONY : src/generar-instancia.s
+
+# target to generate assembly for a file
+src/generar-instancia.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSP.dir/build.make CMakeFiles/TSP.dir/src/generar-instancia.cc.s
+.PHONY : src/generar-instancia.cc.s
+
 src/main.o: src/main.cc.o
 .PHONY : src/main.o
 
@@ -153,6 +177,78 @@ src/main.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSP.dir/build.make CMakeFiles/TSP.dir/src/main.cc.s
 .PHONY : src/main.cc.s
 
+src/tsp-dinamico.o: src/tsp-dinamico.cc.o
+.PHONY : src/tsp-dinamico.o
+
+# target to build an object file
+src/tsp-dinamico.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSP.dir/build.make CMakeFiles/TSP.dir/src/tsp-dinamico.cc.o
+.PHONY : src/tsp-dinamico.cc.o
+
+src/tsp-dinamico.i: src/tsp-dinamico.cc.i
+.PHONY : src/tsp-dinamico.i
+
+# target to preprocess a source file
+src/tsp-dinamico.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSP.dir/build.make CMakeFiles/TSP.dir/src/tsp-dinamico.cc.i
+.PHONY : src/tsp-dinamico.cc.i
+
+src/tsp-dinamico.s: src/tsp-dinamico.cc.s
+.PHONY : src/tsp-dinamico.s
+
+# target to generate assembly for a file
+src/tsp-dinamico.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSP.dir/build.make CMakeFiles/TSP.dir/src/tsp-dinamico.cc.s
+.PHONY : src/tsp-dinamico.cc.s
+
+src/tsp-fuerza-bruta.o: src/tsp-fuerza-bruta.cc.o
+.PHONY : src/tsp-fuerza-bruta.o
+
+# target to build an object file
+src/tsp-fuerza-bruta.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSP.dir/build.make CMakeFiles/TSP.dir/src/tsp-fuerza-bruta.cc.o
+.PHONY : src/tsp-fuerza-bruta.cc.o
+
+src/tsp-fuerza-bruta.i: src/tsp-fuerza-bruta.cc.i
+.PHONY : src/tsp-fuerza-bruta.i
+
+# target to preprocess a source file
+src/tsp-fuerza-bruta.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSP.dir/build.make CMakeFiles/TSP.dir/src/tsp-fuerza-bruta.cc.i
+.PHONY : src/tsp-fuerza-bruta.cc.i
+
+src/tsp-fuerza-bruta.s: src/tsp-fuerza-bruta.cc.s
+.PHONY : src/tsp-fuerza-bruta.s
+
+# target to generate assembly for a file
+src/tsp-fuerza-bruta.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSP.dir/build.make CMakeFiles/TSP.dir/src/tsp-fuerza-bruta.cc.s
+.PHONY : src/tsp-fuerza-bruta.cc.s
+
+src/tsp-voraz.o: src/tsp-voraz.cc.o
+.PHONY : src/tsp-voraz.o
+
+# target to build an object file
+src/tsp-voraz.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSP.dir/build.make CMakeFiles/TSP.dir/src/tsp-voraz.cc.o
+.PHONY : src/tsp-voraz.cc.o
+
+src/tsp-voraz.i: src/tsp-voraz.cc.i
+.PHONY : src/tsp-voraz.i
+
+# target to preprocess a source file
+src/tsp-voraz.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSP.dir/build.make CMakeFiles/TSP.dir/src/tsp-voraz.cc.i
+.PHONY : src/tsp-voraz.cc.i
+
+src/tsp-voraz.s: src/tsp-voraz.cc.s
+.PHONY : src/tsp-voraz.s
+
+# target to generate assembly for a file
+src/tsp-voraz.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TSP.dir/build.make CMakeFiles/TSP.dir/src/tsp-voraz.cc.s
+.PHONY : src/tsp-voraz.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,9 +258,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... TSP"
+	@echo "... src/generar-instancia.o"
+	@echo "... src/generar-instancia.i"
+	@echo "... src/generar-instancia.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/tsp-dinamico.o"
+	@echo "... src/tsp-dinamico.i"
+	@echo "... src/tsp-dinamico.s"
+	@echo "... src/tsp-fuerza-bruta.o"
+	@echo "... src/tsp-fuerza-bruta.i"
+	@echo "... src/tsp-fuerza-bruta.s"
+	@echo "... src/tsp-voraz.o"
+	@echo "... src/tsp-voraz.i"
+	@echo "... src/tsp-voraz.s"
 .PHONY : help
 
 

@@ -19,44 +19,53 @@ class TSPVoraz : public TSPAlgoritmo {
     : TSPAlgoritmo(nombreFichero), tiempo_ejecucion("0") {}
   ~TSPVoraz() override {}
   void resolver() override {
+    auto start = std::chrono::high_resolution_clock::now();
     std::unordered_map<std::string, bool> visitado;
-    std::vector<std::string> ruta;
-    int costo = 0;
-    std::string actual = "0"; // Asumiendo que "0" es el punto de partida
-    auto inicio = std::chrono::high_resolution_clock::now();
-    ruta.push_back(actual);
+    std::vector<std::string> camino;
+    std::string actual = punto_origen;
     visitado[actual] = true;
-    for (int i = 1; i < cantidad_ciudades; i++) {
-      std::string siguiente_ciudad;
-      int minima_distancia = INFINITO;
-      for (const auto& par : matriz_distancias[actual]) {
-        const std::string& ciudad = par.first;
-        int distancia = par.second;
-        if (!visitado[ciudad] && distancia < minima_distancia) {
-          siguiente_ciudad = ciudad;
-          minima_distancia = distancia;
+    camino.push_back(actual);
+
+    for (int i = 1; i < cantidad_ciudades; ++i) {
+      std::string siguiente;
+      int minCosto = INFINITO;
+
+      for (const auto& [ciudad, costo] : matriz_distancias[actual]) {
+        if (!visitado[ciudad] && costo < minCosto) {
+          minCosto = costo;
+          siguiente = ciudad;
         }
       }
-      if (minima_distancia == INFINITO) { break; }
-      visitado[siguiente_ciudad] = true;
-      costo += minima_distancia;
-      actual = siguiente_ciudad;
-      ruta.push_back(actual);
+
+      if (siguiente.empty()) break;
+
+      visitado[siguiente] = true;
+      camino.push_back(siguiente);
+      actual = siguiente;
+
+      auto now = std::chrono::high_resolution_clock::now();
+      std::chrono::duration<double> elapsed = now - start;
+      if (elapsed.count() > 300) { // 300 seconds = 5 minutes
+        tiempo_ejecucion = "EXCESIVO";
+        return;
+      }
     }
-    costo += matriz_distancias[actual]["0"]; // Volver al inicio
-    auto fin = std::chrono::high_resolution_clock::now();
-    auto duracion = std::chrono::duration_cast<std::chrono::milliseconds>(fin - inicio).count();
-    if (duracion > TIEMPO_LIMITE_MS) {
-      tiempo_ejecucion = "EXCESIVO";
-    } else {
-      tiempo_ejecucion = std::to_string(duracion);
+
+    // Volver al nodo inicial
+    camino.push_back(punto_origen);
+
+    auto end = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> elapsed = end - start;
+    tiempo_ejecucion = std::to_string(elapsed.count());
+
+    // Actualizar mejor ruta y costo
+    mejor_ruta = "";
+    mejor_costo = 0;
+    for (size_t i = 0; i < camino.size() - 1; ++i) {
+      mejor_ruta += camino[i] + " -> ";
+      mejor_costo += matriz_distancias[camino[i]][camino[i + 1]];
     }
-    mejor_costo = costo;
-    mejor_ruta = "0 -> ";
-    for (const std::string& ciudad : ruta) {
-      mejor_ruta += ciudad + " -> ";
-    }
-    mejor_ruta += "0";
+    mejor_ruta += camino.back();
   }
   std::string obtenerTiempoEjecucion() const { return tiempo_ejecucion; }
 };

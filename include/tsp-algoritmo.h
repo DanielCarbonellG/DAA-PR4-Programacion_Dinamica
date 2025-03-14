@@ -18,8 +18,7 @@ class TSPAlgoritmo {
   int mejor_costo;
   std::string punto_origen; // Añadir miembro para almacenar el punto de origen
  public:
-  TSPAlgoritmo(std::string nombreFichero)
-    : matriz_distancias(), cantidad_ciudades(0), mejor_ruta(""), mejor_costo(INFINITO), punto_origen("") {
+  TSPAlgoritmo(std::string nombreFichero) : matriz_distancias(), cantidad_ciudades(0), mejor_ruta(""), mejor_costo(INFINITO), punto_origen("") {
     std::ifstream entrada(nombreFichero);
     if (!entrada.is_open()) {
       std::cout << "Error al abrir el archivo de entrada.";
@@ -35,14 +34,12 @@ class TSPAlgoritmo {
       std::string ciudad1, ciudad2;
       int distancia;
       iss >> ciudad1 >> ciudad2 >> distancia;
-
       if (primer_punto) {
         punto_origen = ciudad1;
         primer_punto = false;
       }
-
       matriz_distancias[ciudad1][ciudad2] = distancia;
-      matriz_distancias[ciudad2][ciudad1] = distancia; // Asumiendo que la distancia es bidireccional
+      matriz_distancias[ciudad2][ciudad1] = distancia;
     }
   }
   virtual ~TSPAlgoritmo() {}
@@ -52,4 +49,4 @@ class TSPAlgoritmo {
   std::string obtenerPuntoOrigen() const { return punto_origen; } // Añadir getter para el punto de origen
 };
 
-#endif // TSP_ALGORITMO_H
+#endif

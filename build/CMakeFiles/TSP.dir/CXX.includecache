@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/include/generar-instancia.h
-string
--
-
 /home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/include/tsp-algoritmo.h
 iostream
 -
@@ -22,14 +18,6 @@ unordered_map
 limits
 -
 
-/home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/include/tsp-dinamico.h
-string
--
-chrono
--
-tsp-algoritmo.h
-/home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/include/tsp-algoritmo.h
-
 /home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/include/tsp-fuerza-bruta.h
 vector
 -
@@ -40,27 +28,17 @@ string
 tsp-algoritmo.h
 /home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/include/tsp-algoritmo.h
 
-/home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/include/tsp-voraz.h
-string
--
-tsp-algoritmo.h
-/home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/include/tsp-algoritmo.h
-
-/home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/src/main.cc
-iostream
--
+/home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/src/tsp-fuerza-bruta.cc
 vector
 -
-filesystem
+algorithm
+-
+chrono
+-
+unordered_map
 -
 string
 -
 ../include/tsp-fuerza-bruta.h
 /home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/include/tsp-fuerza-bruta.h
-../include/tsp-voraz.h
-/home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/include/tsp-voraz.h
-../include/tsp-dinamico.h
-/home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/include/tsp-dinamico.h
-../include/generar-instancia.h
-/home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/include/generar-instancia.h
 

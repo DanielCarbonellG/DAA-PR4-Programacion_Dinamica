@@ -109,8 +109,8 @@ void TSPDinamico::resolver() {
       ruta += " -> ";
   }
   auto fin = std::chrono::high_resolution_clock::now();
-  std::chrono::duration<double> duracion_total = fin - inicio;
+  std::chrono::duration<double, std::milli> duracion_total = fin - inicio;
   tiempo_ejecucion = std::to_string(duracion_total.count());
   mejor_costo = best_cost;
   mejor_ruta = ruta;
-} 
+}

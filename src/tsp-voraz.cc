@@ -53,7 +53,7 @@ void TSPVoraz::resolver() {
   }
   camino.push_back(punto_origen);
   auto end = std::chrono::high_resolution_clock::now();
-  std::chrono::duration<double> elapsed = end - start;
+  std::chrono::duration<double, std::milli> elapsed = end - start;
   tiempo_ejecucion = std::to_string(elapsed.count());
   mejor_ruta = "";
   mejor_costo = 0;

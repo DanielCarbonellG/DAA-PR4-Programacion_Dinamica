@@ -36,6 +36,12 @@ void TSPFuerzaBruta::permutar(std::vector<std::string>& ciudades, int l, int r, 
   std::chrono::duration<double> elapsed = ahora - inicio;
   if (elapsed.count() > 300) {
     tiempo_ejecucion = "EXCESIVO";
+    mejor_costo = costo_minimo;
+    mejor_ruta = punto_partida + " -> ";
+    for (const std::string& ciudad : mejor_ruta_local) {
+      mejor_ruta += ciudad + " -> ";
+    }
+    mejor_ruta += punto_partida;
     return;
   }
   if (l == r) {
@@ -75,7 +81,7 @@ void TSPFuerzaBruta::resolver() {
   std::vector<std::string> mejor_ruta_local;
   permutar(ciudades, 0, ciudades.size() - 1, punto_partida, costo_minimo, mejor_ruta_local);
   auto fin = std::chrono::high_resolution_clock::now();
-  std::chrono::duration<double> elapsed = fin - inicio;
+  std::chrono::duration<double, std::milli> elapsed = fin - inicio;
   if (tiempo_ejecucion != "EXCESIVO") {
     tiempo_ejecucion = std::to_string(elapsed.count());
     mejor_costo = costo_minimo;
@@ -84,9 +90,5 @@ void TSPFuerzaBruta::resolver() {
       mejor_ruta += ciudad + " -> ";
     }
     mejor_ruta += punto_partida;
-  }
-  else {
-    mejor_costo = 0;
-    mejor_ruta = "EXCESIVO";
   }
 }

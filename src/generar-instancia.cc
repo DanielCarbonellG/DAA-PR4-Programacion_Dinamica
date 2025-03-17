@@ -23,6 +23,20 @@
 #include "../include/generar-instancia.h"
 
 /**
+ * @brief Genera el nombre del nodo basado en un índice.
+ * @param index Índice del nodo.
+ * @return Nombre del nodo.
+ */
+std::string generarNombreNodo(int index) {
+  std::string nombre;
+  while (index >= 0) {
+    nombre = char('A' + (index % 26)) + nombre;
+    index = index / 26 - 1;
+  }
+  return nombre;
+}
+
+/**
  * @brief Genera instancias del problema del TSP.
  * @param num_nodos Número de nodos (ciudades).
  * @param num_instancias Número de instancias a generar.
@@ -42,7 +56,7 @@ void GenerarInstancia::generar(int num_nodos, int num_instancias, const std::str
     archivo << num_nodos << std::endl;
     std::vector<std::string> nodos;
     for (int j = 0; j < num_nodos; ++j) {
-      nodos.push_back(std::string(1, 'A' + j));
+      nodos.push_back(generarNombreNodo(j));
     }
     for (int j = 0; j < num_nodos; ++j) {
       for (int k = j + 1; k < num_nodos; ++k) {

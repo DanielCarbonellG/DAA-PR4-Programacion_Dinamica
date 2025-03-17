@@ -18,6 +18,7 @@
 #define TSP_DINAMICO_H
 
 #include <string>
+#include <chrono>
 
 #include "tsp-algoritmo.h"
 

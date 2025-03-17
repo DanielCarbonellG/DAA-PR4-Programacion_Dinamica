@@ -32,7 +32,8 @@ int main(int argc, char* argv[]) {
   std::string ruta_carpeta = argv[1];
   std::vector<std::string> instancias;
   GenerarInstancia generador;
-  generador.generar(6, 1, ruta_carpeta); // Generar 3 instancias con 5 nodos cada una
+  generador.generar(6, 1, ruta_carpeta); // Generar 1 instancia con 6 nodos
+  generador.generar(7, 1, ruta_carpeta); // Generar 1 instancia con 8 nodos
   for (const auto& entry : std::filesystem::directory_iterator(ruta_carpeta)) {
     if (entry.is_regular_file()) {
       instancias.push_back(entry.path().string());
@@ -52,9 +53,9 @@ int main(int argc, char* argv[]) {
     std::cout << "Valor Voraz: " << voraz.obtenerMejorCosto() << std::endl;
     std::cout << "Tiempo Voraz (ms): " << voraz.obtenerTiempoEjecucion() << std::endl;
     std::cout << "Ruta Voraz: " << voraz.obtenerMejorRuta() << std::endl << std::endl;
-    // std::cout << "Valor Prog. Dinámica: " << dinamico.obtenerMejorCosto() << std::endl;
-    // std::cout << "Tiempo Prog. Dinámica (ms): " << dinamico.obtenerTiempoEjecucion() << std::endl;
-    // std::cout << "Ruta Prog. Dinámica: " << dinamico.obtenerMejorRuta() << std::endl;
+    std::cout << "Valor Prog. Dinámica: " << dinamico.obtenerMejorCosto() << std::endl;
+    std::cout << "Tiempo Prog. Dinámica (ms): " << dinamico.obtenerTiempoEjecucion() << std::endl;
+    std::cout << "Ruta Prog. Dinámica: " << dinamico.obtenerMejorRuta() << std::endl;
   }
   return 0;
 }

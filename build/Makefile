@@ -231,6 +231,33 @@ src/tsp-fuerza-bruta.cc.s:
 	$(MAKE) -f CMakeFiles/TSP.dir/build.make CMakeFiles/TSP.dir/src/tsp-fuerza-bruta.cc.s
 .PHONY : src/tsp-fuerza-bruta.cc.s
 
+src/tsp-voraz-modificado.o: src/tsp-voraz-modificado.cc.o
+
+.PHONY : src/tsp-voraz-modificado.o
+
+# target to build an object file
+src/tsp-voraz-modificado.cc.o:
+	$(MAKE) -f CMakeFiles/TSP.dir/build.make CMakeFiles/TSP.dir/src/tsp-voraz-modificado.cc.o
+.PHONY : src/tsp-voraz-modificado.cc.o
+
+src/tsp-voraz-modificado.i: src/tsp-voraz-modificado.cc.i
+
+.PHONY : src/tsp-voraz-modificado.i
+
+# target to preprocess a source file
+src/tsp-voraz-modificado.cc.i:
+	$(MAKE) -f CMakeFiles/TSP.dir/build.make CMakeFiles/TSP.dir/src/tsp-voraz-modificado.cc.i
+.PHONY : src/tsp-voraz-modificado.cc.i
+
+src/tsp-voraz-modificado.s: src/tsp-voraz-modificado.cc.s
+
+.PHONY : src/tsp-voraz-modificado.s
+
+# target to generate assembly for a file
+src/tsp-voraz-modificado.cc.s:
+	$(MAKE) -f CMakeFiles/TSP.dir/build.make CMakeFiles/TSP.dir/src/tsp-voraz-modificado.cc.s
+.PHONY : src/tsp-voraz-modificado.cc.s
+
 src/tsp-voraz.o: src/tsp-voraz.cc.o
 
 .PHONY : src/tsp-voraz.o
@@ -279,6 +306,9 @@ help:
 	@echo "... src/tsp-fuerza-bruta.o"
 	@echo "... src/tsp-fuerza-bruta.i"
 	@echo "... src/tsp-fuerza-bruta.s"
+	@echo "... src/tsp-voraz-modificado.o"
+	@echo "... src/tsp-voraz-modificado.i"
+	@echo "... src/tsp-voraz-modificado.s"
 	@echo "... src/tsp-voraz.o"
 	@echo "... src/tsp-voraz.i"
 	@echo "... src/tsp-voraz.s"

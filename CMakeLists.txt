@@ -61,6 +61,7 @@ add_executable(TSP
     src/tsp-dinamico.cc
     src/tsp-fuerza-bruta.cc
     src/tsp-voraz.cc
+    src/tsp-voraz-modificado.cc
     )
 
 # Add expected compiler features to a target.

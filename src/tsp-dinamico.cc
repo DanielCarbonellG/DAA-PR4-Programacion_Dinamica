@@ -20,7 +20,10 @@
  #include <algorithm>
  #include <chrono>
  #include <limits>
- 
+
+/**
+ * @brief Método para resolver el problema del TSP utilizando programación dinámica.
+ */
 void TSPDinamico::resolver() {
   auto inicio = std::chrono::high_resolution_clock::now();
   int n = cantidad_ciudades;

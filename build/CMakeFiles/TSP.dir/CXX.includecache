@@ -18,27 +18,23 @@ unordered_map
 limits
 -
 
-/home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/include/tsp-fuerza-bruta.h
-vector
--
-chrono
--
+/home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/include/tsp-voraz-modificado.h
 string
 -
 tsp-algoritmo.h
 /home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/include/tsp-algoritmo.h
 
-/home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/src/tsp-fuerza-bruta.cc
+/home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/src/tsp-voraz-modificado.cc
 vector
--
-algorithm
--
-chrono
--
-unordered_map
 -
 string
 -
-../include/tsp-fuerza-bruta.h
-/home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/include/tsp-fuerza-bruta.h
+unordered_map
+-
+chrono
+-
+algorithm
+-
+../include/tsp-voraz-modificado.h
+/home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/include/tsp-voraz-modificado.h
 

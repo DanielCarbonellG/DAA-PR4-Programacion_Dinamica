@@ -25,28 +25,31 @@
 #include "../include/tsp-fuerza-bruta.h"
 #include "../include/tsp-voraz.h"
 #include "../include/tsp-dinamico.h"
+#include "../include/tsp-voraz-modificado.h"
 #include "../include/generar-instancia.h"
 
-void imprimirResultados(std::vector<std::tuple<std::string, TSPFuerzaBruta ,TSPVoraz, TSPDinamico>>& resultados) {
+void imprimirResultados(std::vector<std::tuple<std::string, TSPFuerzaBruta, TSPVoraz, TSPDinamico, TSPVorazModificado>>& resultados) {
   std::ofstream archivo("../output/resultado.txt");
   if (!archivo.is_open()) {
     std::cerr << "Error al abrir el archivo de resultados." << std::endl;
     return;
   }
-  // Se añade la columna para los caminos de cada algoritmo.
   archivo << "Instancia | "
           << "Valor Fuerza Bruta | Tiempo Fuerza Bruta (ms) | "
           << "Valor Prog. Dinámica | Tiempo Prog. Dinámica (ms) | "
-          << "Valor Voraz | Tiempo Voraz (ms)" << std::endl;
+          << "Valor Voraz | Tiempo Voraz (ms) | "
+          << "Valor Voraz Modificado | Tiempo Voraz Modificado (ms)" << std::endl;
   for (auto& resultado : resultados) {
-    auto& [instancia, fuerza_bruta, voraz, dinamico] = resultado;
+    auto& [instancia, fuerza_bruta, voraz, dinamico, voraz_modificado] = resultado;
     archivo << instancia << " | "
             << fuerza_bruta.obtenerMejorCosto() << " | "
             << fuerza_bruta.obtenerTiempoEjecucion() << " | "
             << dinamico.obtenerMejorCosto() << " | "
             << dinamico.obtenerTiempoEjecucion() << " | "
             << voraz.obtenerMejorCosto() << " | "
-            << voraz.obtenerTiempoEjecucion() << std::endl;
+            << voraz.obtenerTiempoEjecucion() << " | "
+            << voraz_modificado.obtenerMejorCosto() << " | "
+            << voraz_modificado.obtenerTiempoEjecucion() << std::endl;
   }
   archivo.close();
 }
@@ -66,25 +69,20 @@ int main(int argc, char* argv[]) {
   GenerarInstancia generador;
   
   if (opcion == 1) {
-    // MODO 1: Probar un único grafo
     int num_nodos;
     std::cout << "Ingrese el número de nodos para el grafo: ";
     std::cin >> num_nodos;
     
-    // Utilizamos una carpeta temporal para almacenar la instancia generada
     std::string temp_folder = "./temp_instance";
     if (!std::filesystem::exists(temp_folder)) {
       std::filesystem::create_directory(temp_folder);
     }
-    // Limpiar la carpeta temporal (opcional)
     for (const auto& entry : std::filesystem::directory_iterator(temp_folder)) {
       std::filesystem::remove_all(entry.path());
     }
     
-    // Generar la instancia en la carpeta temporal
     generador.generar(num_nodos, 1, temp_folder);
     
-    // Suponemos que se genera un único fichero en la carpeta temporal
     std::string instancia_archivo;
     for (const auto& entry : std::filesystem::directory_iterator(temp_folder)) {
       if (entry.is_regular_file()) {
@@ -98,7 +96,6 @@ int main(int argc, char* argv[]) {
       return 1;
     }
     
-    // Imprimir el contenido de la instancia por pantalla
     std::ifstream archivo(instancia_archivo);
     if (archivo.is_open()) {
       std::cout << "\n--- Contenido de la instancia generada ---\n";
@@ -108,14 +105,15 @@ int main(int argc, char* argv[]) {
       std::cerr << "Error al abrir el archivo de la instancia." << std::endl;
     }
     
-    // Ejecutar los algoritmos TSP sobre la instancia generada
     TSPFuerzaBruta fuerza_bruta(instancia_archivo);
     TSPVoraz voraz(instancia_archivo);
     TSPDinamico dinamico(instancia_archivo);
+    TSPVorazModificado voraz_modificado(instancia_archivo);
     
     fuerza_bruta.resolver();
     voraz.resolver();
     dinamico.resolver();
+    voraz_modificado.resolver();
     
     std::cout << "\n--- Resultados del TSP ---\n";
     std::cout << "Fuerza Bruta: Costo = " << fuerza_bruta.obtenerMejorCosto()
@@ -128,7 +126,11 @@ int main(int argc, char* argv[]) {
     
     std::cout << "Voraz: Costo = " << voraz.obtenerMejorCosto()
               << ", Tiempo = " << voraz.obtenerTiempoEjecucion() << " ms" << std::endl;
-    std::cout << "Camino: " << voraz.obtenerMejorRuta() << std::endl;    
+    std::cout << "Camino: " << voraz.obtenerMejorRuta() << std::endl << std::endl;
+    
+    std::cout << "Voraz Modificado: Costo = " << voraz_modificado.obtenerMejorCosto()
+              << ", Tiempo = " << voraz_modificado.obtenerTiempoEjecucion() << " ms" << std::endl;
+    std::cout << "Camino: " << voraz_modificado.obtenerMejorRuta() << std::endl;
   } else if (opcion == 2) {
     int min_nodos, max_nodos;
     std::cout << "Ingrese el número mínimo de nodos: ";
@@ -138,12 +140,10 @@ int main(int argc, char* argv[]) {
     
     std::string ruta_carpeta = argv[1];
     
-    // Generar instancias para cada tamaño en el intervalo
     for (int i = min_nodos; i <= max_nodos; ++i) {
       generador.generar(i, 1, ruta_carpeta);
     }
     
-    // Recopilar las rutas de las instancias generadas
     std::vector<std::string> instancias;
     for (const auto& entry : std::filesystem::directory_iterator(ruta_carpeta)) {
       if (entry.is_regular_file()) {
@@ -151,19 +151,19 @@ int main(int argc, char* argv[]) {
       }
     }
     
-    // Ejecutar los algoritmos TSP para cada instancia y recopilar resultados
-    std::vector<std::tuple<std::string, TSPFuerzaBruta, TSPVoraz, TSPDinamico>> resultados;
+    std::vector<std::tuple<std::string, TSPFuerzaBruta, TSPVoraz, TSPDinamico, TSPVorazModificado>> resultados;
     for (const auto& instancia : instancias) {
       TSPFuerzaBruta fuerza_bruta(instancia);
       TSPVoraz voraz(instancia);
       TSPDinamico dinamico(instancia);
+      TSPVorazModificado voraz_modificado(instancia);
       fuerza_bruta.resolver();
       voraz.resolver();
       dinamico.resolver();
-      resultados.emplace_back(instancia, fuerza_bruta, voraz, dinamico);
+      voraz_modificado.resolver();
+      resultados.emplace_back(instancia, fuerza_bruta, voraz, dinamico, voraz_modificado);
     }
     
-    // Imprimir la tabla de resultados en el archivo de salida
     imprimirResultados(resultados);
     std::cout << "\nLos resultados han sido guardados en ../output/resultado.txt" << std::endl;
     

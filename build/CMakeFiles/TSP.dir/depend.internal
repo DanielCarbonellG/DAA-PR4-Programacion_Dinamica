@@ -9,6 +9,7 @@ CMakeFiles/TSP.dir/src/main.cc.o
  /home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/include/tsp-algoritmo.h
  /home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/include/tsp-dinamico.h
  /home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/include/tsp-fuerza-bruta.h
+ /home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/include/tsp-voraz-modificado.h
  /home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/include/tsp-voraz.h
  /home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/src/main.cc
 CMakeFiles/TSP.dir/src/tsp-dinamico.cc.o
@@ -19,6 +20,10 @@ CMakeFiles/TSP.dir/src/tsp-fuerza-bruta.cc.o
  /home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/include/tsp-algoritmo.h
  /home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/include/tsp-fuerza-bruta.h
  /home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/src/tsp-fuerza-bruta.cc
+CMakeFiles/TSP.dir/src/tsp-voraz-modificado.cc.o
+ /home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/include/tsp-algoritmo.h
+ /home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/include/tsp-voraz-modificado.h
+ /home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/src/tsp-voraz-modificado.cc
 CMakeFiles/TSP.dir/src/tsp-voraz.cc.o
  /home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/include/tsp-algoritmo.h
  /home/guillermo/DAA/DAA-PR4-Programacion_Dinamica/include/tsp-voraz.h
